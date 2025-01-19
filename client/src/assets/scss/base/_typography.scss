@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Helvetica Neue", "Helvetica";
+    font-weight: 400;
+    color: $gray-70;
+}
+
+p, label {
+    font-family: "Helvetica Neue", "Helvetica";
+    font-weight: 300;
+    font-size: 1rem;
+    color: $gray-60;
+}
+
+span {
+    font-family: "Helvetica Neue", "Helvetica";
+}

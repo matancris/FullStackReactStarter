@@ -1,0 +1,115 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #cce5ff 0%, #b8daff 100%);
+
+  .content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    margin: 0 1rem;
+
+    @include for-mobile-layout {
+      padding: 1.5rem;
+      margin: 0 0.5rem;
+    }
+  }
+
+  .title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+
+    @include for-mobile-layout {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .description {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: #6c757d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include for-mobile-layout {
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    @include for-mobile-layout {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+  }
+
+  .button {
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.25rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    border-radius: 0.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-width: 140px;
+
+    @include for-mobile-layout {
+      width: 100%;
+      padding: 0.875rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &.primary {
+      background: #007bff;
+      color: white;
+
+      &:hover {
+        background: #0069d9;
+      }
+    }
+
+    &.secondary {
+      background: white;
+      color: #007bff;
+      border: 2px solid #007bff;
+
+      &:hover {
+        background: #e6f2ff;
+      }
+    }
+  }
+}
