@@ -61,7 +61,7 @@ A modern full-stack starter template featuring React (Vite) frontend and Node.js
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/matancris/FullStackReactStarter.git
    cd full-stack-starter
    ```
 
